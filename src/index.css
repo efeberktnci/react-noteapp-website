@@ -80,6 +80,8 @@ margin-top: 0.5rem;
 transition: transform 300ms ease-in-out;
 }
 
+.note p{}
+
 .note:nth-child(3){
   grid-column: 1/3;
 }
