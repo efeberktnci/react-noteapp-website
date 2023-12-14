@@ -32,6 +32,15 @@ const EditNote = ({ notes, setNotes }) => {
     navigate('/');
   };
 
+
+  const handleDelete = () =>{
+   if (window.confirm("Silmek istediğinze emin misiniz ?")){
+    const newNotes = notes.filter((item)=> item.id !=id);
+    setNotes(newNotes);
+    navigate("/")
+   }
+  }
+
   return (
     <section>
       <header className='create-note__header'>
@@ -41,7 +50,7 @@ const EditNote = ({ notes, setNotes }) => {
         <button className='btn lg primary' onClick={handleForm}>
           Kaydet
         </button>
-        <button className='btn lg danger'>
+        <button className='btn lg danger' onClick={handleDelete}>
           <MdDelete />
         </button>
       </header>
