@@ -1,4 +1,4 @@
-const dummy = [
+const notes = [
     {
       id: 1,
       title: "Meeting Agenda",
@@ -61,4 +61,4 @@ const dummy = [
     }
   ];
 
-  export default dummy;
+  export default notes;

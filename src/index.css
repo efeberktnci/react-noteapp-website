@@ -5,6 +5,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  outline: 0;
 }
 
 :root {
@@ -46,6 +47,15 @@ body{
   box-shadow: none;
 }
 
+.btn.add__btn{
+  position: fixed;
+  margin-top: 15px;
+
+}
+.btn.danger{
+  background: red;
+}
+
 #app{
   background-color: var(--color-bg-black);
   height: 48rem;
@@ -80,7 +90,10 @@ margin-top: 0.5rem;
 transition: transform 300ms ease-in-out;
 }
 
-.note p{}
+.note p{
+  font-size: 0.8rem;
+  opacity: 0.90;
+}
 
 .note:nth-child(3){
   grid-column: 1/3;

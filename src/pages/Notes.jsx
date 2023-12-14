@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {CiSearch} from "react-icons/ci"
 import {MdClose} from "react-icons/md"
 import {FaPlus} from "react-icons/fa6"
-import dummy from "../dummy_notes"
+import notes from "../dummy_notes"
 import NoteItem from '../components/NoteItem'
 import { Link } from 'react-router-dom'
 
@@ -19,8 +19,8 @@ const Notes = () => {
       </header>
       <div className="notes__container">
         {/* <p className='empty_notes'>Not eklemek ister misiniz ?</p> */}
-        {dummy.map((dummy)=>(
-          <NoteItem key={dummy.id} dummy={dummy} />
+        {notes.map((notes)=>(
+          <NoteItem key={notes.id} notes={notes} />
         ))}
 
       </div>
