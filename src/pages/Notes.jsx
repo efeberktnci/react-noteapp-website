@@ -27,8 +27,8 @@ const Notes = ({ notes }) => {
   return (
     <section className="container">
       <header className="notes__header">
-        <h2>Notlarım</h2>
-        <input
+        {!showSearch && <h2>Notlarım</h2>}
+        {showSearch && ( <input
           type="text"
           placeholder="Aramak istediğiniz kelimeyi giriniz"
           onChange={(e) => {
@@ -37,7 +37,10 @@ const Notes = ({ notes }) => {
           }}
         />
 
-        <button className="btn">
+        )}
+       
+
+        <button className="btn" onClick={()=>setShowSearch(prevState => !prevState)}>
           {showSearch ? <MdClose /> : <CiSearch />}
         </button>
       </header>
